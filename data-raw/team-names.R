@@ -16,15 +16,15 @@ p_load(dplyr,    # functions for manipulating the data, writing files
        )
 
 # read the mlb stadium data from wiki -------------------------------------
-mlb = read_html("https://en.wikipedia.org/wiki/List_of_current_Major_League_Baseball_stadiums")
+stadiums = read_html("https://en.wikipedia.org/wiki/List_of_current_Major_League_Baseball_stadiums")
 
 # recover the table with the team names using the browser inspector tool
-mlb = mlb %>%
+stadiums = stadiums %>%
   html_nodes("#mw-content-text > div.mw-parser-output > table:nth-child(8)") %>%
   html_table(fill = TRUE)
 
 # convert to dataframe
-mlb = as_tibble(mlb[[1]]) %>%
+stadiums = as_tibble(stadiums[[1]]) %>%
   # clean up column names
   clean_names() %>%
   # select columns
@@ -42,4 +42,4 @@ mlb = as_tibble(mlb[[1]]) %>%
 # Note that names are unquoted.
 # I like using overwrite = T so everytime I run the script the
 # updated objects are saved, but the default is overwrite = F
-usethis::use_data(mlb, overwrite = T)
+usethis::use_data(stadiums, overwrite = T)
