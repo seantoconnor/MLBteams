@@ -1,8 +1,4 @@
 ## code to prepare `team-names` dataset goes here
-
-usethis::use_data(team-names, overwrite = TRUE)
-
-# data-raw/mydataset.R
 # Data import and processing pipeline
 
 # install/load pacman
