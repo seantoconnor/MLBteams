@@ -6,10 +6,12 @@ Authors@R:
            family = "O'Connor",
            role = c("aut", "cre"),
            email = "stoconno09@gmail.com")
+Maintainer: Sean O'Connor <stoconno09@gmail.com>
 Description: This package creates a re-usable data from the wikipedia page on MLB stadiums. The current version uses the information available prior to the 2021 season.
-License: `BSD`
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+URL: https://github.com/seantoconnor/MLBteams
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0
 Depends: 
